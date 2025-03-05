@@ -161,6 +161,95 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         
+        /* Projects Section Styling */
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .project-card {
+            margin-bottom: 60px;
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        @media (min-width: 768px) {
+            .project-card {
+                flex-direction: row;
+            }
+            
+            .project-card:nth-child(even) {
+                flex-direction: row-reverse;
+            }
+        }
+
+        .project-image {
+            flex: 1;
+            min-width: 300px;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.05);
+        }
+
+        .project-content {
+            flex: 2;
+            padding: 30px;
+        }
+
+        .project-title {
+            font-size: 1.8rem;
+            margin: 0 0 5px 0;
+            color: #333;
+        }
+
+        .project-date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .project-section {
+            margin-bottom: 20px;
+        }
+
+        .project-section h4 {
+            color: #4dabf7;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .project-section ul {
+            padding-left: 20px;
+            margin: 0;
+        }
+
+        .project-section li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
+            .project-image {
+                height: 250px;
+            }
+        }
+        
         /* Footer */
         footer {
             background-color: #333;
@@ -237,10 +326,160 @@
         </div>
     </section>
 
-    <!-- Projects Section Placeholder -->
+    <!-- Projects Section -->
     <section class="section" id="projects">
         <h2 class="section-title">Featured Projects</h2>
-        <p style="text-align: center;">Project content coming soon!</p>
+        <div class="projects-container">
+            <!-- Metal Detecting Rover -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/metal-detector-rover.jpg" alt="Metal Detecting Rover">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Metal Detecting Rover</h3>
+                    <p class="project-date">May 2022 - April 2023</p>
+                    
+                    <div class="project-section">
+                        <h4>What:</h4>
+                        <ul>
+                            <li>Autonomous solar-powered rover that maps terrain while detecting metal objects</li>
+                            <li>Custom chassis with tank treads for all-terrain navigation</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h4>How:</h4>
+                        <ul>
+                            <li>Programmed Arduino and ESP32 microcontrollers with C++ for autonomous navigation</li>
+                            <li>Designed chassis using Fusion360 for sand and dirt traversal with worm gear motors</li>
+                            <li>Implemented PID control with integrated gyroscope, compass, and GPS</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h4>Results:</h4>
+                        <ul>
+                            <li>Improved metal detection efficiency by 75% compared to manual methods</li>
+                            <li>Created detailed maps pinpointing detected metal objects for retrieval</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Speaker Driver Board -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/speaker-driver-board.jpg" alt="Speaker Driver Board">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Speaker Driver Board</h3>
+                    <p class="project-date">August 2023 - January 2025</p>
+                    
+                    <div class="project-section">
+                        <h4>What:</h4>
+                        <ul>
+                            <li>Specialized PCB to drive three piezo speakers on an electric vehicle</li>
+                            <li>Safety system to alert when high voltage is active</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h4>How:</h4>
+                        <ul>
+                            <li>Designed PCB with multiple speaker circuits using KiCAD</li>
+                            <li>Utilized RE46C1/2/3 ICs to drive high-voltage piezo elements</li>
+                            <li>Implemented fast-response voltage detection circuitry</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h4>Results:</h4>
+                        <ul>
+                            <li>Speakers chimed within nanoseconds of high voltage activation</li>
+                            <li>Achieved 80dB output up to 2 meters around the vehicle</li>
+                            <li>Enhanced safety by providing clear indication of high voltage presence</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sit-Up Counting Device -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/situp-counter.jpg" alt="Sit-Up Counting Device">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Sit-Up Counting Device</h3>
+                    <p class="project-date">2022 - 2023</p>
+                    
+                    <div class="project-section">
+                        <h4>What:</h4>
+                        <ul>
+                            <li>Automatic sit-up counter to track workout progress</li>
+                            <li>Pressure plate system with microcontroller integration</li>
+                            <li>Smartphone app connectivity for data tracking</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h4>How:</h4>
+                        <ul>
+                            <li>Designed pressure plate that mechanically triggers internal buttons</li>
+                            <li>Programmed Arduino Nano microcontroller to track button signals</li>
+                            <li>Developed smartphone app integration for long-term fitness tracking</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h4>Results:</h4>
+                        <ul>
+                            <li>Eliminated the need to mentally count repetitions during workouts</li>
+                            <li>Created data logging system for tracking fitness progress over time</li>
+                            <li>Enabled performance analysis across hourly, daily, weekly, and monthly intervals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Dental Model Orientation System -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/dental-ai-model.jpg" alt="AI Dental Model Orientation System">
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">AI Dental Model Orientation System</h3>
+                    <p class="project-date">2024 - Present</p>
+                    
+                    <div class="project-section">
+                        <h4>What:</h4>
+                        <ul>
+                            <li>Reinforcement learning AI model that automatically orients 3D dental models on build plates</li>
+                            <li>Python-based solution using PyTorch framework</li>
+                            <li>Self-trained model with custom dental scan dataset</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h4>How:</h4>
+                        <ul>
+                            <li>Implemented human feedback reinforcement learning where I manually rated outputs 1-10 to guide the optimization process</li>
+                            <li>Created custom dataset of dental scans with optimal positioning patterns</li>
+                            <li>Created reward system based on build efficiency, support structure minimization, and print quality</li>
+                            <li>Implemented Python solution with PyTorch for model development and deployment</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="project-section">
+                        <h4>Results:</h4>
+                        <ul>
+                            <li>Automated previously manual orientation process in dental model production</li>
+                            <li>Improved build plate efficiency and reduced support material waste</li>
+                            <li>Decreased preparation time by 90% for dental model printing workflows</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Footer -->
