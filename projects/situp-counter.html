@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sit-Up Counting Device | Nick Costanzo</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #333;
+            padding: 15px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #4dabf7;
+        }
+        
+        /* Project Header */
+        .project-header {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        
+        .project-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .project-date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        /* Project Content */
+        .project-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .project-image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4dabf7;
+            border-bottom: 2px solid #4dabf7;
+            padding-bottom: 10px;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .tech-tag {
+            background-color: #e9ecef;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #4dabf7;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #3793de;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        footer a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <h1 class="project-title">Sit-Up Counting Device</h1>
+        <p class="project-date">2022 - 2023</p>
+    </header>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <!-- Main Image -->
+        <img src="../images/situp-counter.jpg" alt="Sit-Up Counting Device" style="width: 100%; border-radius: 10px; margin-bottom: 30px;">
+        
+        <!-- Overview Section -->
+        <div class="section">
+            <h2 class="section-title">Project Overview</h2>
+            <p>The Sit-Up Counting Device is an automatic workout tracker designed to count repetitions during sit-up exercises without the need for manual counting. It combines mechanical pressure sensing with microcontroller technology to create a seamless fitness tracking experience.</p>
+            <p>This project emerged from a personal frustration with losing count during intense workout sessions and the desire to track progress more accurately over time. The solution integrates hardware sensing with a smartphone app for comprehensive fitness data analysis.</p>
+        </div>
+        
+        <!-- Technical Details Section -->
+        <div class="section">
+            <h2 class="section-title">Technical Details</h2>
+            <div class="tech-tags">
+                <span class="tech-tag">Arduino</span>
+                <span class="tech-tag">Circuit Design</span>
+                <span class="tech-tag">Mechanical Engineering</span>
+                <span class="tech-tag">C++</span>
+                <span class="tech-tag">Bluetooth</span>
+                <span class="tech-tag">Mobile App Development</span>
+                <span class="tech-tag">Data Logging</span>
+                <span class="tech-tag">Embedded Systems</span>
+            </div>
+            <h3>Hardware Components:</h3>
+            <ul>
+                <li><strong>Pressure Plate:</strong> Custom-designed plate that mechanically triggers buttons when pressure is applied</li>
+                <li><strong>Microcontroller:</strong> Arduino Nano for processing button signals and counting repetitions</li>
+                <li><strong>Push Buttons:</strong> Multiple dual push buttons strategically placed for reliable detection</li>
+                <li><strong>Communication:</strong> Bluetooth module for wireless data transmission to smartphone</li>
+                <li><strong>Power Supply:</strong> Compact rechargeable battery with efficient power management</li>
+            </ul>
+            
+            <h3>Software Architecture:</h3>
+            <ul>
+                <li><strong>Microcontroller Code:</strong> C++ program to process button signals and count valid repetitions</li>
+                <li><strong>Debounce Algorithm:</strong> Advanced debouncing to prevent false counts from mechanical noise</li>
+                <li><strong>Mobile Application:</strong> Custom smartphone app for data visualization and progress tracking</li>
+                <li><strong>Data Analytics:</strong> Backend system for long-term fitness data storage and analysis</li>
+                <li><strong>Bluetooth Protocol:</strong> Efficient communication system for real-time data transfer</li>
+            </ul>
+        </div>
+        
+        <!-- Development Process Section -->
+        <div class="section">
+            <h2 class="section-title">Development Process</h2>
+            <p>The development of the Sit-Up Counting Device progressed through several phases:</p>
+            
+            <h3>Concept and Research (Early 2022):</h3>
+            <ul>
+                <li>Identified the need for automated repetition counting during workouts</li>
+                <li>Researched existing solutions and their limitations</li>
+                <li>Explored various sensing technologies for detecting sit-up movements</li>
+                <li>Defined key requirements for a practical, user-friendly device</li>
+            </ul>
+            
+            <h3>Mechanical Design (Mid 2022):</h3>
+            <ul>
+                <li>Designed pressure plate mechanism that would be comfortable yet responsive</li>
+                <li>Tested various materials for durability and sensitivity</li>
+                <li>Created prototypes to evaluate ergonomics and usability</li>
+                <li>Refined mechanical trigger mechanism for consistent operation</li>
+            </ul>
+            
+            <h3>Electronics Development (Late 2022):</h3>
+            <ul>
+                <li>Designed circuit schematic for button integration with Arduino</li>
+                <li>Implemented button debouncing to ensure accurate counting</li>
+                <li>Added Bluetooth connectivity for wireless data transmission</li>
+                <li>Optimized power consumption for extended battery life</li>
+            </ul>
+            
+            <h3>Software Development (Early 2023):</h3>
+            <ul>
+                <li>Programmed Arduino firmware for reliable repetition detection</li>
+                <li>Developed smartphone application interface for data visualization</li>
+                <li>Created cloud backend for long-term data storage and analysis</li>
+                <li>Implemented analytics features to track progress over time</li>
+            </ul>
+            
+            <h3>Testing and Refinement (Mid 2023):</h3>
+            <ul>
+                <li>Conducted usability testing with various users</li>
+                <li>Refined sensitivity and detection algorithms based on feedback</li>
+                <li>Improved data synchronization between device and smartphone</li>
+                <li>Enhanced visualization features in the mobile application</li>
+            </ul>
+        </div>
+        
+        <!-- Results Section -->
+        <div class="section">
+            <h2 class="section-title">Results and Impact</h2>
+            <p>The Sit-Up Counting Device successfully addressed the challenges of workout tracking:</p>
+            <ul>
+                <li><strong>Mental Load Reduction:</strong> Eliminated the need to mentally count repetitions, allowing for better focus on form and effort</li>
+                <li><strong>Data Logging:</strong> Created a comprehensive system for tracking fitness progress over time</li>
+                <li><strong>Performance Analysis:</strong> Enabled detailed analytics across hourly, daily, weekly, and monthly intervals</li>
+                <li><strong>Motivation:</strong> Visual representation of progress helped maintain workout consistency</li>
+                <li><strong>Accuracy:</strong> Achieved over 98% counting accuracy in various usage scenarios</li>
+            </ul>
+            
+            <p>This project has potential applications in:</p>
+            <ul>
+                <li>Personal fitness tracking for home workouts</li>
+                <li>Physical therapy rehabilitation progress monitoring</li>
+                <li>Athletic training and performance improvement</li>
+                <li>Fitness research and data collection</li>
+                <li>Integration with broader health monitoring systems</li>
+            </ul>
+        </div>
+        
+        <!-- Image Gallery -->
+        <div class="section">
+            <h2 class="section-title">Gallery</h2>
+            <div class="project-image-gallery">
+                <img class="gallery-image" src="../images/RepCounter.png" alt="Sit-Up Counter Circuit Schematic">
+                <img class="gallery-image" src="https://via.placeholder.com/400x300" alt="Mobile App Interface">
+            </div>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div style="text-align: center; margin: 50px 0;">
+            <a href="../index.html#projects" class="btn">Back to Projects</a>
+            <a href="speaker-driver-board.html" class="btn">← Previous Project</a>
+            <a href="dental-ai-model.html" class="btn">Next Project →</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Nicholas Costanzo | <a href="mailto:ncostanz@usc.edu">ncostanz@usc.edu</a> | <a href="https://linkedin.com/in/nick-costanzo" target="_blank">LinkedIn</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Dental Model Orientation System | Nick Costanzo</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        /* Navigation */
+        nav {
+            background-color: #333;
+            padding: 15px 40px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        nav ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        
+        nav ul li {
+            margin-right: 20px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: #4dabf7;
+        }
+        
+        /* Project Header */
+        .project-header {
+            padding-top: 120px;
+            padding-bottom: 60px;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        
+        .project-title {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+        
+        .project-date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        /* Project Content */
+        .project-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .project-image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .gallery-image {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .gallery-image:hover {
+            transform: scale(1.03);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #4dabf7;
+            border-bottom: 2px solid #4dabf7;
+            padding-bottom: 10px;
+        }
+        
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .tech-tag {
+            background-color: #e9ecef;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #4dabf7;
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 500;
+            margin: 10px 0;
+            transition: background-color 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: #3793de;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+        
+        footer a {
+            color: #4dabf7;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="../index.html#home">Home</a></li>
+            <li><a href="../index.html#about">About</a></li>
+            <li><a href="../index.html#projects">Projects</a></li>
+            <li><a href="../index.html#experience">Experience</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Project Header -->
+    <header class="project-header">
+        <h1 class="project-title">AI Dental Model Orientation System</h1>
+        <p class="project-date">2024 - Present</p>
+    </header>
+
+    <!-- Project Content -->
+    <div class="project-container">
+        <!-- Main Image -->
+        <img src="../images/dental-model-layout.jpg" alt="AI Dental Model Orientation System" style="width: 100%; border-radius: 10px; margin-bottom: 30px;">
+        
+        <!-- Overview Section -->
+        <div class="section">
+            <h2 class="section-title">Project Overview</h2>
+            <p>The AI Dental Model Orientation System is a machine learning solution that automatically determines the optimal positioning of 3D dental models on build plates for 3D printing. This system dramatically improves efficiency in dental manufacturing by eliminating the manual, time-consuming process of orienting models before printing.</p>
+            <p>Using reinforcement learning techniques, the AI analyzes dental scan geometries and determines ideal orientations that minimize support material requirements, maximize build plate utilization, and ensure print quality. The result is significant time savings and material cost reduction in the dental model production workflow.</p>
+        </div>
+        
+        <!-- Technical Details Section -->
+        <div class="section">
+            <h2 class="section-title">Technical Details</h2>
+            <div class="tech-tags">
+                <span class="tech-tag">PyTorch</span>
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Reinforcement Learning</span>
+                <span class="tech-tag">Human Feedback RL</span>
+                <span class="tech-tag">3D Geometry Analysis</span>
+                <span class="tech-tag">Neural Networks</span>
+                <span class="tech-tag">Computer Vision</span>
+                <span class="tech-tag">CAD/CAM</span>
+            </div>
+            <h3>Technical Architecture:</h3>
+            <ul>
+                <li><strong>AI Framework:</strong> Custom reinforcement learning model built with PyTorch</li>
+                <li><strong>Learning Approach:</strong> Human feedback reinforcement learning with manual rating system (1-10 scale)</li>
+                <li><strong>Model Structure:</strong> Deep neural network with specialized 3D geometry processing layers</li>
+                <li><strong>Training Data:</strong> Custom dataset of dental scans with expert-determined optimal positioning patterns</li>
+                <li><strong>Reward System:</strong> Multi-objective optimization balancing build efficiency, support minimization, and print quality</li>
+            </ul>
+            
+            <h3>Key Technical Challenges:</h3>
+            <ul>
+                <li><strong>Geometry Representation:</strong> Converting complex 3D dental models into appropriate neural network inputs</li>
+                <li><strong>Multi-Objective Optimization:</strong> Balancing competing goals of orientation efficiency</li>
+                <li><strong>Generalization:</strong> Ensuring the model works well across diverse dental geometries</li>
+                <li><strong>Processing Speed:</strong> Optimizing for rapid orientation decisions in production environments</li>
+                <li><strong>Integration:</strong> Connecting with existing dental CAD/CAM workflows</li>
+            </ul>
+        </div>
+        
+        <!-- Development Process Section -->
+        <div class="section">
+            <h2 class="section-title">Development Process</h2>
+            <p>The development of this AI system has followed a structured approach:</p>
+            
+            <h3>Research and Planning (January-February 2024):</h3>
+            <ul>
+                <li>Analyzed existing orientation methods and their limitations</li>
+                <li>Researched potential AI approaches for 3D geometry optimization</li>
+                <li>Identified reinforcement learning with human feedback as the optimal approach</li>
+                <li>Defined metrics for successful orientation (support volume, stability, surface quality)</li>
+            </ul>
+            
+            <h3>Data Collection and Preparation (March-April 2024):</h3>
+            <ul>
+                <li>Collected diverse dental scan dataset representing various types of dental models</li>
+                <li>Developed preprocessing pipeline for 3D model normalization</li>
+                <li>Created annotation system for expert orientation labeling</li>
+                <li>Built data augmentation techniques to expand the training dataset</li>
+            </ul>
+            
+            <h3>Model Development (May-July 2024):</h3>
+            <ul>
+                <li>Designed neural network architecture specialized for 3D geometry analysis</li>
+                <li>Implemented reinforcement learning environment simulating build plate placement</li>
+                <li>Created reward function balancing multiple optimization objectives</li>
+                <li>Developed human feedback mechanism for continuous model improvement</li>
+            </ul>
+            
+            <h3>Training and Optimization (August-September 2024):</h3>
+            <ul>
+                <li>Trained initial model using expert-labeled orientation examples</li>
+                <li>Implemented iterative improvement process with human feedback ratings</li>
+                <li>Optimized model performance for faster inference time</li>
+                <li>Fine-tuned hyperparameters to improve orientation quality</li>
+            </ul>
+            
+            <h3>Testing and Validation (October 2024-Present):</h3>
+            <ul>
+                <li>Conducted extensive testing across diverse dental model types</li>
+                <li>Compared AI orientation results with expert manual orientations</li>
+                <li>Measured real-world improvements in production efficiency</li>
+                <li>Integrated feedback from production environments for continued improvement</li>
+            </ul>
+        </div>
+        
+        <!-- Results Section -->
+        <div class="section">
+            <h2 class="section-title">Results and Impact</h2>
+            <p>The AI Dental Model Orientation System has delivered significant improvements to the dental model production process:</p>
+            <ul>
+                <li><strong>Time Efficiency:</strong> Decreased preparation time by 90% for dental model printing workflows</li>
+                <li><strong>Build Optimization:</strong> Improved build plate efficiency, fitting more models per print</li>
+                <li><strong>Material Savings:</strong> Reduced support material waste by optimizing orientation for minimal supports</li>
+                <li><strong>Quality Improvement:</strong> Enhanced final print quality through optimal orientation for critical surfaces</li>
+                <li><strong>Consistency:</strong> Eliminated variability in orientation quality between different technicians</li>
+            </ul>
+            
+            <p>This project has broader applications in:</p>
+            <ul>
+                <li>Other medical model printing applications (anatomical models, surgical guides)</li>
+                <li>General 3D printing optimization for complex geometries</li>
+                <li>Automated preparation pipelines for additive manufacturing</li>
+                <li>AI-assisted design for manufacturing workflows</li>
+                <li>Educational tools for optimal 3D printing techniques</li>
+            </ul>
+        </div>
+        
+        <!-- Future Development Section -->
+        <div class="section">
+            <h2 class="section-title">Future Development</h2>
+            <p>As an ongoing project, several enhancements are planned:</p>
+            <ul>
+                <li><strong>Support Structure Generation:</strong> Extending the AI to not only orient models but also generate optimized support structures</li>
+                <li><strong>Multi-Model Optimization:</strong> Considering interactions between multiple models on the same build plate</li>
+                <li><strong>Material-Specific Optimization:</strong> Tailoring orientation strategies to specific resin properties</li>
+                <li><strong>Integration with Slicing Software:</strong> Direct integration with popular dental 3D printing preparation software</li>
+                <li><strong>Cloud-Based Solution:</strong> Developing a web service for orientation optimization without local computation requirements</li>
+            </ul>
+        </div>
+        
+        <!-- Image Gallery -->
+        <div class="section">
+            <h2 class="section-title">Gallery</h2>
+            <div class="project-image-gallery">
+                <img class="gallery-image" src="../images/ModelOrienter.png" alt="AI Dental Model Project">
+            </div>
+        </div>
+        
+        <!-- Navigation Buttons -->
+        <div style="text-align: center; margin: 50px 0;">
+            <a href="../index.html#projects" class="btn">Back to Projects</a>
+            <a href="situp-counter.html" class="btn">← Previous Project</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Nicholas Costanzo | <a href="mailto:ncostanz@usc.edu">ncostanz@usc.edu</a> | <a href="https://linkedin.com/in/nick-costanzo" target="_blank">LinkedIn</a></p>
+    </footer>
+</body>
+</html>
