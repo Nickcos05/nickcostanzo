@@ -1,494 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nick Costanzo | Engineering Portfolio</title>
-    <style>
-        /* General styling */
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-        }
-        
-        /* Navigation */
-        nav {
-            background-color: #333;
-            padding: 15px 40px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-        }
-        
-        nav ul li {
-            margin-right: 20px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #4dabf7;
-        }
-        
-        /* Hero section with image overlay */
-        .hero {
-            height: 100vh;
-            background-image: url('https://via.placeholder.com/1920x1080');
-            background-size: cover;
-            background-position: center;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.7);
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            color: white;
-            max-width: 800px;
-            padding: 20px;
-        }
-        
-        .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-        }
-        
-        .hero-content h2 {
-            font-size: 2rem;
-            font-weight: 300;
-            margin-bottom: 20px;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #4dabf7;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
-            margin: 10px;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #3793de;
-        }
-        
-        /* About section */
-        .section {
-            padding: 80px 40px;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        
-        .about-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
-        
-        .about-text {
-            flex: 1;
-            min-width: 300px;
-            padding: 20px;
-        }
-        
-        .about-image {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-            padding: 20px;
-        }
-        
-        .about-image img {
-            max-width: 100%;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        /* Skills section */
-        .skills-container {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .skills-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 15px;
-        }
-        
-        .skill-badge {
-            background-color: #f8f9fa;
-            padding: 10px 20px;
-            border-radius: 30px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        /* Projects Section Styling */
-        .projects-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .project-card {
-            margin-bottom: 60px;
-            background-color: white;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            display: flex;
-            flex-direction: column;
-        }
-
-        @media (min-width: 768px) {
-            .project-card {
-                flex-direction: row;
-            }
-            
-            .project-card:nth-child(even) {
-                flex-direction: row-reverse;
-            }
-        }
-
-        .project-image {
-            flex: 1;
-            min-width: 300px;
-            max-width: 100%;
-            overflow: hidden;
-        }
-
-        .project-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-
-        .project-card:hover .project-image img {
-            transform: scale(1.05);
-        }
-
-        .project-content {
-            flex: 2;
-            padding: 30px;
-        }
-
-        .project-title {
-            font-size: 1.8rem;
-            margin: 0 0 5px 0;
-            color: #333;
-        }
-
-        .project-date {
-            color: #666;
-            font-style: italic;
-            margin-bottom: 20px;
-        }
-
-        .project-section {
-            margin-bottom: 20px;
-        }
-
-        .project-section h4 {
-            color: #4dabf7;
-            margin-bottom: 10px;
-            font-size: 1.2rem;
-        }
-
-        .project-section ul {
-            padding-left: 20px;
-            margin: 0;
-        }
-
-        .project-section li {
-            margin-bottom: 8px;
-            line-height: 1.5;
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 767px) {
-            .project-image {
-                height: 250px;
-            }
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 30px;
-        }
-        
-        footer a {
-            color: #4dabf7;
-            text-decoration: none;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nick Costanzo | Engineering Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Navigation -->
+  <header>
     <nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="contact.html">Contact</a></li>
+      <div class="nav-container">
+        <a href="#home" class="logo">Nick Costanzo</a>
+        <button class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </div>
     </nav>
-
-    <!-- Hero Section with Image Overlay -->
     <section class="hero" id="home">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1>Nick Costanzo</h1>
-            <h2>Electrical & Computer Engineering Portfolio</h2>
-            <p>BS/MS Candidate at University of Southern California | Electrical Systems Engineer</p>
-            <a href="#projects" class="btn">View Projects</a>
-            <a href="contact.html" class="btn">Contact Me</a>
-        </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Nick Costanzo</h1>
+        <h2>Electrical &amp; Computer Engineering Portfolio</h2>
+        <p>BS/MS Candidate at University of Southern California | Electrical Systems Engineer</p>
+        <a href="#projects" class="btn">View Projects</a>
+        <a href="contact.html" class="btn">Contact Me</a>
+      </div>
     </section>
-
+  </header>
+  <main>
     <!-- About Section -->
     <section class="section" id="about">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-container">
-            <div class="about-image">
-                <img src="images/nick-profile.jpeg" alt="Nick Costanzo">
-            </div>
-            <div class="about-text">
-                <p>I'm an Electrical and Computer Engineering student at the University of Southern California, pursuing a combined BS/MS degree with an expected graduation in May 2027.</p>
-                <p>Currently, I serve as the Electrical Systems Lead for USC Formula Electric Racing, where I oversee electrical systems integration and safety architecture for competition vehicles. Previously, I co-founded Neoterium Labs, an engineering maker space where I directed development of innovative projects including a Metal-Detecting Rover and a Rubiks-Cube Solving Robot.</p>
-                <p>With experience in PCB design, embedded systems, and electrical engineering, I'm passionate about creating hardware solutions that combine precise engineering with practical applications.</p>
-                <p>When I'm not working on technical projects, I enjoy Snowboarding, Skateboarding, Running, Hiking, and any other thrillseeking activty!.</p>
-            </div>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-container">
+        <div class="about-image">
+          <img src="images/nick-profile.jpeg" alt="Nick Costanzo" loading="lazy">
         </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="section" style="background-color: #f8f9fa;">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-container">
-            <div class="skills-list">
-                <div class="skill-badge">C++</div>
-                <div class="skill-badge">Python</div>
-                <div class="skill-badge">MATLAB</div>
-                <div class="skill-badge">GitHub</div>
-                <div class="skill-badge">Soldering/Rework</div>
-                <div class="skill-badge">KiCAD</div>
-                <div class="skill-badge">LTSpice</div>
-                <div class="skill-badge">Arduino</div>
-                <div class="skill-badge">ESP32</div>
-                <div class="skill-badge">PCB Design</div>
-                <div class="skill-badge">Fusion360</div>
-                <div class="skill-badge">3D Printing</div>
-                <div class="skill-badge">Embedded Systems</div>
-            </div>
+        <div class="about-text">
+          <p>I'm an Electrical and Computer Engineering student at the University of Southern California, pursuing a combined BS/MS degree with an expected graduation in May 2027.</p>
+          <p>Currently, I serve as the Electrical Systems Lead for USC Formula Electric Racing, where I oversee electrical systems integration and safety architecture for competition vehicles. Previously, I co-founded Neoterium Labs, an engineering maker space where I directed development of innovative projects including a Metal‑Detecting Rover and a Rubiks‑Cube Solving Robot.</p>
+          <p>With experience in PCB design, embedded systems, and electrical engineering, I'm passionate about creating hardware solutions that combine precise engineering with practical applications.</p>
+          <p>When I'm not working on technical projects, I enjoy Snowboarding, Skateboarding, Running, Hiking, and other thrill‑seeking activities!</p>
         </div>
+      </div>
     </section>
+    
 
-    <!-- Projects Section -->
+    
+    <!-- Projects Section (2x2 Grid Layout) -->
     <section class="section" id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-container">
-            <!-- Metal Detecting Rover -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/rover.jpg" alt="Metal Detecting Rover">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title"><a href="projects/metal-detecting-rover.html" style="color: inherit; text-decoration: none;">Metal Detecting Rover</a></h3>
-                    <p class="project-date">May 2022 - April 2023</p>
-                    
-                    <div class="project-section">
-                        <h4>What:</h4>
-                        <ul>
-                            <li>Autonomous solar-powered rover that maps terrain while detecting metal objects</li>
-                            <li>Custom chassis with tank treads for all-terrain navigation</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>How:</h4>
-                        <ul>
-                            <li>Programmed Arduino and ESP32 microcontrollers with C++ for autonomous navigation</li>
-                            <li>Designed chassis using Fusion360 for sand and dirt traversal with worm gear motors</li>
-                            <li>Implemented PID control with integrated gyroscope, compass, and GPS</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>Results:</h4>
-                        <ul>
-                            <li>Improved metal detection efficiency by 75% compared to manual methods</li>
-                            <li>Created detailed maps pinpointing detected metal objects for retrieval</li>
-                        </ul>
-                    </div>
-                    <a href="projects/metal-detecting-rover.html" class="btn" style="margin-top: 10px;">Read More</a>
-                </div>
+      <h2 class="section-title">Featured Projects</h2>
+      <div class="projects-container">
+        <!-- Metal Detecting Rover -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/rover.jpg" alt="Metal Detecting Rover" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title"><a href="projects/metal-detecting-rover.html">Metal Detecting Rover</a></h3>
+            <p class="project-date">May 2022 - April 2023</p>
+            <div class="project-section">
+              <h4>What:</h4>
+              <ul>
+                <li>Autonomous solar‑powered rover that maps terrain while detecting metal objects</li>
+                <li>Custom chassis with tank treads for all‑terrain navigation</li>
+              </ul>
             </div>
-
-            <!-- Speaker Driver Board -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/super-noisy-board.jpg" alt="Speaker Driver Board">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title"><a href="projects/speaker-driver-board.html" style="color: inherit; text-decoration: none;">Speaker Driver Board</a></h3>
-                    <p class="project-date">August 2023 - January 2025</p>
-                    
-                    <div class="project-section">
-                        <h4>What:</h4>
-                        <ul>
-                            <li>Specialized PCB to drive three piezo speakers on an electric vehicle</li>
-                            <li>Safety system to alert when high voltage is active</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>How:</h4>
-                        <ul>
-                            <li>Designed PCB with multiple speaker circuits using KiCAD</li>
-                            <li>Utilized RE46C1/2/3 ICs to drive high-voltage piezo elements</li>
-                            <li>Implemented fast-response voltage detection circuitry</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>Results:</h4>
-                        <ul>
-                            <li>Speakers chimed within nanoseconds of high voltage activation</li>
-                            <li>Achieved 80dB output up to 2 meters around the vehicle</li>
-                            <li>Enhanced safety by providing clear indication of high voltage presence</li>
-                        </ul>
-                    </div>
-                    <a href="projects/speaker-driver-board.html" class="btn" style="margin-top: 10px;">Read More</a>
-                </div>
+            <div class="project-section">
+              <h4>How:</h4>
+              <ul>
+                <li>Programmed Arduino and ESP32 microcontrollers with C++ for autonomous navigation</li>
+                <li>Designed chassis using Fusion360 for sand and dirt traversal</li>
+                <li>Implemented PID control with integrated gyroscope, compass, and GPS</li>
+              </ul>
             </div>
-
-            <!-- Sit-Up Counting Device -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/RepCounter.png" alt="Sit-Up Counting Device">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title"><a href="projects/situp-counter.html" style="color: inherit; text-decoration: none;">Sit-Up Counting Device</a></h3>
-                    <p class="project-date">2022 - 2023</p>
-                    
-                    <div class="project-section">
-                        <h4>What:</h4>
-                        <ul>
-                            <li>Automatic sit-up counter to track workout progress</li>
-                            <li>Pressure plate system with microcontroller integration</li>
-                            <li>Smartphone app connectivity for data tracking</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>How:</h4>
-                        <ul>
-                            <li>Designed pressure plate that mechanically triggers internal buttons</li>
-                            <li>Programmed Arduino Nano microcontroller to track button signals</li>
-                            <li>Developed smartphone app integration for long-term fitness tracking</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>Results:</h4>
-                        <ul>
-                            <li>Eliminated the need to mentally count repetitions during workouts</li>
-                            <li>Created data logging system for tracking fitness progress over time</li>
-                            <li>Enabled performance analysis across hourly, daily, weekly, and monthly intervals</li>
-                        </ul>
-                    </div>
-                    <a href="projects/situp-counter.html" class="btn" style="margin-top: 10px;">Read More</a>
-                </div>
+            <div class="project-section">
+              <h4>Results:</h4>
+              <ul>
+                <li>Improved metal detection efficiency by 75%</li>
+                <li>Created detailed maps pinpointing detected metal objects for retrieval</li>
+              </ul>
             </div>
-
-            <!-- AI Dental Model Orientation System -->
-            <div class="project-card">
-                <div class="project-image">
-                    <img src="images/ModelOrienter.png" alt="AI Dental Model Orientation System">
-                </div>
-                <div class="project-content">
-                    <h3 class="project-title"><a href="projects/dental-ai-model.html" style="color: inherit; text-decoration: none;">AI Dental Model Orientation System</a></h3>
-                    <p class="project-date">2024 - Present</p>
-                    
-                    <div class="project-section">
-                        <h4>What:</h4>
-                        <ul>
-                            <li>Reinforcement learning AI model that automatically orients 3D dental models on build plates</li>
-                            <li>Python-based solution using PyTorch framework</li>
-                            <li>Self-trained model with custom dental scan dataset</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>How:</h4>
-                        <ul>
-                            <li>Implemented human feedback reinforcement learning where I manually rated outputs 1-10 to guide the optimization process</li>
-                            <li>Created custom dataset of dental scans with optimal positioning patterns</li>
-                            <li>Created reward system based on build efficiency, support structure minimization, and print quality</li>
-                            <li>Implemented Python solution with PyTorch for model development and deployment</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="project-section">
-                        <h4>Results:</h4>
-                        <ul>
-                            <li>Automated previously manual orientation process in dental model production</li>
-                            <li>Improved build plate efficiency and reduced support material waste</li>
-                            <li>Decreased preparation time by 90% for dental model printing workflows</li>
-                        </ul>
-                    </div>
-                    <a href="projects/dental-ai-model.html" class="btn" style="margin-top: 10px;">Read More</a>
-                </div>
-            </div>
+            <a href="projects/metal-detecting-rover.html" class="btn">Read More</a>
+          </div>
         </div>
+        
+        <!-- Speaker Driver Board -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/super-noisy-board.jpg" alt="Speaker Driver Board" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title"><a href="projects/speaker-driver-board.html">Speaker Driver Board</a></h3>
+            <p class="project-date">August 2023 - January 2025</p>
+            <div class="project-section">
+              <h4>What:</h4>
+              <ul>
+                <li>Specialized PCB to drive three piezo speakers on an electric vehicle</li>
+                <li>Safety system that alerts when high voltage is active</li>
+              </ul>
+            </div>
+            <div class="project-section">
+              <h4>How:</h4>
+              <ul>
+                <li>Designed PCB using KiCAD and simulated with LTSpice</li>
+                <li>Utilized RE46C1/2/3 ICs for piezo element driving</li>
+                <li>Implemented fast‑response voltage detection circuitry</li>
+              </ul>
+            </div>
+            <div class="project-section">
+              <h4>Results:</h4>
+              <ul>
+                <li>Speakers chimed within nanoseconds of high voltage detection</li>
+                <li>Achieved 80dB output at 2 meters</li>
+                <li>Enhanced safety with clear high‑voltage indication</li>
+              </ul>
+            </div>
+            <a href="projects/speaker-driver-board.html" class="btn">Read More</a>
+          </div>
+        </div>
+        
+        <!-- Sit-Up Counting Device -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/RepCounter.png" alt="Sit-Up Counting Device" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title"><a href="projects/situp-counter.html">Sit-Up Counting Device</a></h3>
+            <p class="project-date">2022 - 2023</p>
+            <div class="project-section">
+              <h4>What:</h4>
+              <ul>
+                <li>Automatic device to count sit‑up repetitions</li>
+                <li>Pressure plate system with microcontroller integration</li>
+              </ul>
+            </div>
+            <div class="project-section">
+              <h4>How:</h4>
+              <ul>
+                <li>Designed a pressure plate triggering internal buttons</li>
+                <li>Programmed an Arduino Nano for accurate counting</li>
+                <li>Integrated smartphone app connectivity for data tracking</li>
+              </ul>
+            </div>
+            <div class="project-section">
+              <h4>Results:</h4>
+              <ul>
+                <li>Eliminated manual counting during workouts</li>
+                <li>Implemented data logging for performance analysis</li>
+              </ul>
+            </div>
+            <a href="projects/situp-counter.html" class="btn">Read More</a>
+          </div>
+        </div>
+        
+        <!-- AI Dental Model Orientation System -->
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/ModelOrienter.png" alt="AI Dental Model Orientation System" loading="lazy">
+          </div>
+          <div class="project-content">
+            <h3 class="project-title"><a href="projects/dental-ai-model.html">AI Dental Model Orientation System</a></h3>
+            <p class="project-date">2024 - Present</p>
+            <div class="project-section">
+              <h4>What:</h4>
+              <ul>
+                <li>AI model for automatically orienting 3D dental models on build plates</li>
+                <li>Python‑based solution using PyTorch and reinforcement learning</li>
+              </ul>
+            </div>
+            <div class="project-section">
+              <h4>How:</h4>
+              <ul>
+                <li>Implemented human feedback reinforcement learning</li>
+                <li>Created a custom dental scan dataset</li>
+                <li>Developed a reward system for build efficiency</li>
+              </ul>
+            </div>
+            <div class="project-section">
+              <h4>Results:</h4>
+              <ul>
+                <li>Automated manual orientation processes</li>
+                <li>Improved build plate efficiency and reduced material waste</li>
+                <li>Decreased preparation time by 90%</li>
+              </ul>
+            </div>
+            <a href="projects/dental-ai-model.html" class="btn">Read More</a>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Nicholas Costanzo | <a href="mailto:ncostanz@usc.edu">ncostanz@usc.edu</a> | <a href="https://linkedin.com/in/nick-costanzo" target="_blank">LinkedIn</a></p>
-    </footer>
+  </main>
+  <footer>
+    <p>© 2025 Nicholas Costanzo | <a href="mailto:ncostanz@usc.edu">ncostanz@usc.edu</a> | <a href="https://linkedin.com/in/nick-costanzo" target="_blank">LinkedIn</a></p>
+  </footer>
 </body>
 </html>
