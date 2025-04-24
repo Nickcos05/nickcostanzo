@@ -1,207 +1,88 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nick Costanzo | Engineering Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-</head>
-<body>
-  <header>
-    <nav>
-      <div class="nav-container">
-        <a href="#home" class="logo">Nick Costanzo</a>
-        <button class="hamburger" id="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </button>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
+---
+layout: default
+title: Home
+---
+<header>
+  <section class="hero" id="home">
+    <div class="container">
+      <h1 class="hero-title"><span id="typing-text"></span></h1>
+      <p class="hero-subtitle">BS/MS Candidate at University of Southern California | Electrical Systems Engineer</p>
+      <div class="hero-buttons">
+        <a href="#projects" class="project-link">View Projects</a>
+        <a href="{{ '/contact.html' | relative_url }}" class="project-link">Contact Me</a>
       </div>
-    </nav>
-    <section class="hero" id="home">
-      <div class="hero-overlay"></div>
-      <div class="hero-content">
-        <h1>Nick Costanzo</h1>
-        <h2>Electrical &amp; Computer Engineering Portfolio</h2>
-        <p>BS/MS Candidate at University of Southern California | Electrical Systems Engineer</p>
-        <a href="#projects" class="btn">View Projects</a>
-        <a href="contact.html" class="btn">Contact Me</a>
-      </div>
-    </section>
-  </header>
-  <main>
-    <!-- About Section -->
-    <section class="section" id="about">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-container">
-        <div class="about-image">
-          <img src="images/nick-profile.jpeg" alt="Nick Costanzo" loading="lazy">
-        </div>
-        <div class="about-text">
-          <p>I'm an Electrical and Computer Engineering student at the University of Southern California, pursuing a combined BS/MS degree with an expected graduation in May 2027.</p>
-          <p>Currently, I serve as the Electrical Systems Lead for USC Formula Electric Racing, where I oversee electrical systems integration and safety architecture for competition vehicles. Previously, I co-founded Neoterium Labs, an engineering maker space where I directed development of innovative projects including a Metal‑Detecting Rover and a Rubiks‑Cube Solving Robot.</p>
-          <p>With experience in PCB design, embedded systems, and electrical engineering, I'm passionate about creating hardware solutions that combine precise engineering with practical applications.</p>
-          <p>When I'm not working on technical projects, I enjoy Snowboarding, Skateboarding, Running, Hiking, and other thrill‑seeking activities!</p>
-        </div>
-      </div>
-    </section>
-    
+    </div>
+  </section>
+</header>
 
-    
-    <!-- Projects Section (2x2 Grid Layout) -->
-    <section class="section" id="projects">
-      <h2 class="section-title">Featured Projects</h2>
-      <div class="projects-container">
+<main>
+  <section class="projects" id="projects">
+    <div class="container">
+      <h2 class="about-title" style="margin-top: 4rem;">Recent Projects</h2>
+      <div class="projects-grid">
         <!-- Metal Detecting Rover -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="images/Rover.jpg" alt="Metal Detecting Rover" loading="lazy">
-          </div>
+        <a href="{{ '/projects/metal-detecting-rover.html' | relative_url }}" class="project-card">
+          <img src="{{ '/images/Rover.jpg' | relative_url }}" alt="Metal Detecting Rover" class="project-image" loading="lazy">
           <div class="project-content">
-            <h3 class="project-title"><a href="projects/metal-detecting-rover.html">Metal Detecting Rover</a></h3>
-            <p class="project-date">May 2022 - April 2023</p>
-            <div class="project-section">
-              <h4>What:</h4>
-              <ul>
-                <li>Autonomous solar‑powered rover that maps terrain while detecting metal objects</li>
-                <li>Custom chassis with tank treads for all‑terrain navigation</li>
-              </ul>
-            </div>
-            <div class="project-section">
-              <h4>How:</h4>
-              <ul>
-                <li>Programmed Arduino and ESP32 microcontrollers with C++ for autonomous navigation</li>
-                <li>Designed chassis using Fusion360 for sand and dirt traversal</li>
-                <li>Implemented PID control with integrated gyroscope, compass, and GPS</li>
-              </ul>
-            </div>
-            <div class="project-section">
-              <h4>Results:</h4>
-              <ul>
-                <li>Improved metal detection efficiency by 75%</li>
-                <li>Created detailed maps pinpointing detected metal objects for retrieval</li>
-              </ul>
-            </div>
-            <a href="projects/metal-detecting-rover.html" class="btn">Read More</a>
+            <h3 class="project-title">Metal Detecting Rover</h3>
+            <p class="project-description">
+              An autonomous solar-powered rover that maps terrain while detecting metal objects. Features custom chassis with tank treads for all-terrain navigation.
+            </p>
           </div>
-        </div>
+        </a>
         
         <!-- Speaker Driver Board -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="images/super-noisy-board.jpg" alt="Speaker Driver Board" loading="lazy">
-          </div>
+        <a href="{{ '/projects/speaker-driver-board.html' | relative_url }}" class="project-card">
+          <img src="{{ '/images/super-noisy-board.jpg' | relative_url }}" alt="Speaker Driver Board" class="project-image" loading="lazy">
           <div class="project-content">
-            <h3 class="project-title"><a href="projects/speaker-driver-board.html">Speaker Driver Board</a></h3>
-            <p class="project-date">August 2023 - January 2025</p>
-            <div class="project-section">
-              <h4>What:</h4>
-              <ul>
-                <li>Specialized PCB to drive three piezo speakers on an electric vehicle</li>
-                <li>Safety system that alerts when high voltage is active</li>
-              </ul>
-            </div>
-            <div class="project-section">
-              <h4>How:</h4>
-              <ul>
-                <li>Designed PCB using KiCAD and simulated with LTSpice</li>
-                <li>Utilized RE46C1/2/3 ICs for piezo element driving</li>
-                <li>Implemented fast‑response voltage detection circuitry</li>
-              </ul>
-            </div>
-            <div class="project-section">
-              <h4>Results:</h4>
-              <ul>
-                <li>Speakers chimed within nanoseconds of high voltage detection</li>
-                <li>Achieved 80dB output at 2 meters</li>
-                <li>Enhanced safety with clear high‑voltage indication</li>
-              </ul>
-            </div>
-            <a href="projects/speaker-driver-board.html" class="btn">Read More</a>
+            <h3 class="project-title">Speaker Driver Board</h3>
+            <p class="project-description">
+              A specialized PCB to drive three piezo speakers on an electric vehicle, featuring a safety system that alerts when high voltage is active.
+            </p>
           </div>
-        </div>
+        </a>
         
         <!-- Sit-Up Counting Device -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="images/RepCounter.png" alt="Sit-Up Counting Device" loading="lazy">
-          </div>
+        <a href="{{ '/projects/situp-counter.html' | relative_url }}" class="project-card">
+          <img src="{{ '/images/RepCounter.png' | relative_url }}" alt="Sit-Up Counting Device" class="project-image" loading="lazy">
           <div class="project-content">
-            <h3 class="project-title"><a href="projects/situp-counter.html">Sit-Up Counting Device</a></h3>
-            <p class="project-date">2022 - 2023</p>
-            <div class="project-section">
-              <h4>What:</h4>
-              <ul>
-                <li>Automatic device to count sit‑up repetitions</li>
-                <li>Pressure plate system with microcontroller integration</li>
-              </ul>
-            </div>
-            <div class="project-section">
-              <h4>How:</h4>
-              <ul>
-                <li>Designed a pressure plate triggering internal buttons</li>
-                <li>Programmed an Arduino Nano for accurate counting</li>
-                <li>Integrated smartphone app connectivity for data tracking</li>
-              </ul>
-            </div>
-            <div class="project-section">
-              <h4>Results:</h4>
-              <ul>
-                <li>Eliminated manual counting during workouts</li>
-                <li>Implemented data logging for performance analysis</li>
-              </ul>
-            </div>
-            <a href="projects/situp-counter.html" class="btn">Read More</a>
+            <h3 class="project-title">Sit-Up Counter</h3>
+            <p class="project-description">
+              An automatic device to count sit-up repetitions using a pressure plate system with microcontroller integration and smartphone connectivity.
+            </p>
           </div>
-        </div>
+        </a>
         
         <!-- AI Dental Model Orientation System -->
-        <div class="project-card">
-          <div class="project-image">
-            <img src="images/ModelOrienter.png" alt="AI Dental Model Orientation System" loading="lazy">
-          </div>
+        <a href="{{ '/projects/dental-ai-model.html' | relative_url }}" class="project-card">
+          <img src="{{ '/images/ModelOrienter.png' | relative_url }}" alt="AI Dental Model Orientation System" class="project-image" loading="lazy">
           <div class="project-content">
-            <h3 class="project-title"><a href="projects/dental-ai-model.html">AI Dental Model Orientation System</a></h3>
-            <p class="project-date">2024 - Present</p>
-            <div class="project-section">
-              <h4>What:</h4>
-              <ul>
-                <li>AI model for automatically orienting 3D dental models on build plates</li>
-                <li>Python‑based solution using PyTorch and reinforcement learning</li>
-              </ul>
-            </div>
-            <div class="project-section">
-              <h4>How:</h4>
-              <ul>
-                <li>Implemented human feedback reinforcement learning</li>
-                <li>Created a custom dental scan dataset</li>
-                <li>Developed a reward system for build efficiency</li>
-              </ul>
-            </div>
-            <div class="project-section">
-              <h4>Results:</h4>
-              <ul>
-                <li>Automated manual orientation processes</li>
-                <li>Improved build plate efficiency and reduced material waste</li>
-                <li>Decreased preparation time by 90%</li>
-              </ul>
-            </div>
-            <a href="projects/dental-ai-model.html" class="btn">Read More</a>
+            <h3 class="project-title">AI Dental Model Orienter</h3>
+            <p class="project-description">
+              An AI model for automatically orienting 3D dental models on build plates using PyTorch and reinforcement learning.
+            </p>
           </div>
-        </div>
+        </a>
       </div>
-    </section>
-  </main>
-  <!-- Chat widget -->
-  <footer>
-    <p>© 2025 Nicholas Costanzo | <a href="mailto:ncostanz@usc.edu">ncostanz@usc.edu</a> | <a href="https://linkedin.com/in/nick-costanzo" target="_blank">LinkedIn</a></p>
-  </footer>
-</body>
-</html>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Typing animation
+    const text = "Hello, I'm Nick";
+    const typingText = document.getElementById('typing-text');
+    let i = 0;
+    
+    function typeWriter() {
+      if (i < text.length) {
+        typingText.innerHTML += text.charAt(i);
+        i++;
+        setTimeout(typeWriter, 100);
+      }
+    }
+    
+    typeWriter();
+  });
+</script>

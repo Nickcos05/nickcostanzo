@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title }} | Nick Costanzo</title>
+  <link rel="stylesheet" href="{{ '/modern-styles.css' | relative_url }}" />
+  <script src="{{ '/script.js' | relative_url }}" defer></script>
+</head>
+<body>
+  <div class="animate-fade-in">
+    {% include nav.html %}
+    {{ content }}
+    {% include footer.html %}
+  </div>
+</body>
+</html>

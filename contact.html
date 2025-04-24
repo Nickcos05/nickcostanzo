@@ -1,178 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Nick Costanzo</title>
-    <style>
-        /* General styling */
-        body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333;
-            line-height: 1.6;
-        }
+---
+layout: default
+title: Contact
+---
+<main>
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2 class="about-title">Contact Me</h2>
+      <p class="contact-intro">I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
+      
+      <div class="contact-grid">
+        <!-- Email Option -->
+        <article class="contact-card">
+          <div class="contact-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <h3 class="contact-title">Email Me</h3>
+          <p class="contact-info">Feel free to reach out via email for inquiries, collaborations, or just to say hello!</p>
+          <a href="mailto:ncostanz@usc.edu" class="project-link">Send Email</a>
+        </article>
         
-        /* Navigation */
-        nav {
-            background-color: #333;
-            padding: 15px 40px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-        
-        nav ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-        }
-        
-        nav ul li {
-            margin-right: 20px;
-        }
-        
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
-        
-        nav ul li a:hover {
-            color: #4dabf7;
-        }
-        
-        /* Contact section */
-        .contact-section {
-            padding: 120px 40px 80px;
-            max-width: 800px;
-            margin: 0 auto;
-            text-align: center;
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 40px;
-            text-align: center;
-        }
-        
-        .contact-options {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 50px;
-        }
-        
-        .contact-card {
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            padding: 30px;
-            width: 300px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .contact-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .contact-icon {
-            font-size: 50px;
-            margin-bottom: 20px;
-            color: #4dabf7;
-        }
-        
-        .contact-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
-        }
-        
-        .contact-info {
-            margin-bottom: 20px;
-            color: #666;
-        }
-        
-        .btn {
-            display: inline-block;
-            background-color: #4dabf7;
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
-            transition: background-color 0.3s;
-        }
-        
-        .btn:hover {
-            background-color: #3793de;
-        }
-        
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 30px;
-            margin-top: 80px;
-        }
-        
-        footer a {
-            color: #4dabf7;
-            text-decoration: none;
-        }
-    </style>
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-    <!-- Navigation -->
-    <nav>
-        <ul>
-            <li><a href="index.html#home">Home</a></li>
-            <li><a href="index.html#about">About</a></li>
-            <li><a href="index.html#projects">Projects</a></li>
-            <li><a href="index.html#experience">Experience</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <h2 class="section-title">Contact Me</h2>
-        <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.</p>
-        
-        <div class="contact-options">
-            <!-- Email Option -->
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fas fa-envelope"></i>
-                </div>
-                <h3 class="contact-title">Email Me</h3>
-                <p class="contact-info">Feel free to reach out via email for inquiries, collaborations, or just to say hello!</p>
-                <a href="mailto:ncostanz@usc.edu" class="btn">Send Email</a>
-            </div>
-            
-            <!-- LinkedIn Option -->
-            <div class="contact-card">
-                <div class="contact-icon">
-                    <i class="fab fa-linkedin"></i>
-                </div>
-                <h3 class="contact-title">Connect on LinkedIn</h3>
-                <p class="contact-info">Let's connect professionally on LinkedIn to stay updated with each other's work.</p>
-                <a href="https://linkedin.com/in/nick-costanzo" target="_blank" class="btn">View Profile</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Nicholas Costanzo | <a href="mailto:nick.costanzo5@icloud.com">nick.costanzo5@icloud.com</a> | <a href="https://linkedin.com/in/nick-costanzo" target="_blank">LinkedIn</a></p>
-    </footer>
-</body>
-</html>
+        <!-- LinkedIn Option -->
+        <article class="contact-card">
+          <div class="contact-icon">
+            <i class="fab fa-linkedin"></i>
+          </div>
+          <h3 class="contact-title">Connect on LinkedIn</h3>
+          <p class="contact-info">Let's connect professionally on LinkedIn to stay updated with each other's work.</p>
+          <a href="https://linkedin.com/in/nick-costanzo" target="_blank" class="project-link">View Profile</a>
+        </article>
+      </div>
+    </div>
+  </section>
+</main>
