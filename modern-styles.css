@@ -213,6 +213,28 @@ body {
   color: white;
 }
 
+/* Project Image Gallery */
+.project-image-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.gallery-image {
+  width: 50%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: var(--card-shadow);
+  transition: transform 0.3s ease;
+  margin: 0 auto;
+  display: block;
+}
+
+.gallery-image:hover {
+  transform: scale(1.02);
+}
+
 /* About Section */
 .about {
   padding: 4rem 0;
