@@ -12,7 +12,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 # Load and concatenate all HTML files in this directory into a single text block
 def load_site_content():
     texts = []
-    for fname in glob.glob("*.html"):
+    for fname in glob.glob("**/*.html", recursive=True):
         with open(fname, encoding="utf8") as f:
             texts.append(f.read())
     return "\n\n".join(texts)
