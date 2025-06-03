@@ -16,4 +16,16 @@ Personal Portfolio
    ```bash
    python chatbot.py
    ```
-4. Open `index.html` in your browser and ask questions in the chat box.
+4. Serve the website locally so that the browser can fetch `/chat`. You can use
+   a simple HTTP server or Jekyll:
+   ```bash
+   # option 1
+   python -m http.server
+
+   # option 2 (if you use Jekyll)
+   bundle exec jekyll serve
+   ```
+   The Flask app listens on `PORT` (defaults to `5000`). Whichever URL you load
+   the site from must be able to reach the Flask server at the same URL used in
+   `script.js` (currently `fetch('/chat')`). Configure your ports accordingly so
+   that the browser can POST to `/chat`.
