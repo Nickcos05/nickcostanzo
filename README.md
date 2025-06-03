@@ -16,4 +16,8 @@ Personal Portfolio
    ```bash
    python chatbot.py
    ```
-4. Open `index.html` in your browser and ask questions in the chat box.
+4. In a separate terminal, start a local HTTP server to serve the site:
+   ```bash
+   python -m http.server
+   ```
+   Then open `http://localhost:8000/index.html` in your browser and ask questions in the chat box.
