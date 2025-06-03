@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const log = document.getElementById("chat-log");
   const input = document.getElementById("chat-input");
+  const API_URL = window.API_URL || "http://localhost:5000/chat";
 
   if (!log || !input) return;
 
@@ -13,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
     log.innerHTML += `<div><strong>You:</strong> ${question}</div>`;
 
     try {
-      const res = await fetch("/chat", {
+      const res = await fetch(API_URL, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ message: question })
