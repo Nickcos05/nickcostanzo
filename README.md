@@ -28,6 +28,7 @@ Personal Portfolio
 2. Push the repository to GitHub if it isn't already there.
 3. Sign in to [Railway](https://railway.app) and create a **New Project** from your GitHub repo.
 4. In the project settings, add an environment variable named `OPENAI_API_KEY` with your key.
-5. Deploy the service. Railway will install the requirements and start the server using the Procfile command.
-6. Note the generated service URL and update `API_URL` in your site if needed so the chat box sends requests to `https://your-service-url/chat`.
+5. Add a `.ruby-version` file specifying Ruby `3.1.2` to satisfy Railway's builder. The provided `Gemfile` causes Ruby to be detected, and without this version file the build fails.
+6. Deploy the service. Railway will install the requirements and start the server using the Procfile command.
+7. Note the generated service URL and update `API_URL` in your site if needed so the chat box sends requests to `https://your-service-url/chat`.
 
