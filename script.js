@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   const log = document.getElementById("chat-log");
   const input = document.getElementById("chat-input");
-  const API_URL = window.API_URL || "http://localhost:5000/chat";
+  const API_URL = window.API_URL || "http://localhost:5001/chat";
 
   if (!log || !input) return;
 
